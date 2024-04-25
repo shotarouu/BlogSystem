@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BlogSystem.Models.Blog>
+
+@{
+    ViewBag.Title = "ブログ記事投稿サイト";
+}
+
+<h2 style="text-align:center">ブログ記事投稿サイト</h2>
+
+<p>
+    @Html.ActionLink("新規記事作成", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.ActionLink("編集", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("詳細", "Details", new { id=item.Id }) |
+            @Html.ActionLink("削除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
