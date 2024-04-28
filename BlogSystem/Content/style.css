@@ -1,0 +1,22 @@
+﻿p.comment{
+    text-align : center;
+}
+
+img {
+    margin: auto;
+    display: block;
+    padding-bottom : 10px;
+    width : 55%;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid black;
+    width: 55%;
+    margin: auto;
+    display: block;
+}
+
+p.contents {
+    font-size: 1.5rem;
+}
